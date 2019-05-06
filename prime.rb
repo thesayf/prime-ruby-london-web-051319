@@ -1,15 +1,9 @@
-def prime?(x)
-  if x == 1
-    return true 
-  elsif x < 1
-    return false
-  else
-  for y in 2..(x-1)
-    if (x % y) == 0
-      return false 
+def prime?(number)
+  if number >= 2
+    (2..number - 1).all? do |x|
+      number % x != 0
     end
-  end 
-end
-
-   true
+  else
+    return false
+  end
 end
